@@ -65,7 +65,7 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
                     return;
                 }
 
-                if ('results' in response) {
+                if ('code' in response) {
                     var hacktophp_version = response.version;
                     
                     if (hacktophp_version.indexOf('@')) {
@@ -74,50 +74,16 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
 
                     var hacktophp_header = 'PHP output: \n\n'
 
-                    if (response.results.length === 0) {
-                        document.getElementById('hacktophp_output').innerText = hacktophp_header + 'No issues!';
+                    document.getElementById('hacktophp_output').innerText = hacktophp_header + response.code;
 
-                        callback([]);
-                    }
-                    else {
-                        var text = response.results.map(
-                            function (issue) {
-                                return (issue.severity === 'error' ? 'ERROR' : 'INFO') + ': '
-                                    + issue.type + ' - ' + issue.line_from + ':'
-                                    + issue.column_from + ' - ' + issue.message;
-                            }
-                        );
-
-                        document.getElementById('hacktophp_output').innerText = hacktophp_header + text.join('\n\n');
-
-                        callback(
-                            response.results.map(
-                                function (issue) {
-                                    return {
-                                        severity: issue.severity === 'error' ? 'error' : 'warning',
-                                        message: issue.message,
-                                        from: cm.posFromIndex(issue.from),
-                                        to: cm.posFromIndex(issue.to)
-                                    };
-                                }
-                            )
-                        );
-                    }  
+                    callback([]); 
                 }
                 else if ('error' in response) {
-                    var error_type = response.error.type === 'parser_error' ? 'Parser' : 'Internal Psalm';
-                    document.getElementById('hacktophp_output').innerText = 'Psalm runner output: \n\n'
-                        + error_type + ' error on line ' + response.error.line_from + ' - '
-                        + response.error.message;
+                    var hacktophp_header = 'Error output: \n\n'
 
-                    console.log(cm.posFromIndex(response.error.to));
+                    document.getElementById('hacktophp_output').innerText = hacktophp_header + response.error;
 
-                    callback({
-                       message: response.error.message,
-                       severity: 'error',
-                       from: cm.posFromIndex(response.error.from),
-                       to: cm.posFromIndex(response.error.to),
-                    });
+                    callback([]);
                 }
             })
             .catch (function (error) {
