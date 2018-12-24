@@ -40,9 +40,9 @@ try {
     );
 
     $prettyPrinter = new \PhpParser\PrettyPrinter\Standard;
-    echo '<?php' . PHP_EOL . $prettyPrinter->prettyPrint($stmts) . PHP_EOL;
+    echo json_encode(['code' => '<?php' . PHP_EOL . $prettyPrinter->prettyPrint($stmts) . PHP_EOL]);
 } catch (Throwable $t) {
-    echo 'Error' . PHP_EOL;
+    echo json_encode(['error' => 'Error']);
 } finally {
     unlink($tmpfname);
 }
