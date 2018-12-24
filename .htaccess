@@ -1,0 +1,17 @@
+Header set Access-Control-Allow-Origin "*"
+AddType image/svg+xml svg svgz
+AddType application/javascript .js
+AddEncoding gzip svgz
+<ifmodule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/css application/x-javascript application/javascript
+</ifmodule>
+
+DirectoryIndex index.php index.html
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^$ /views/index.php [L,NC]
+
+RewriteRule ^composer\.*$ - [F,L]
+RewriteRule ^includes/?.*$ - [F,L]
+RewriteRule ^vendor/?.*$ - [F,L]
