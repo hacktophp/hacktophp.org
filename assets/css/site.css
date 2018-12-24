@@ -601,6 +601,7 @@ div.CodeMirror {
 
 .code_expanded #hacktophp_output {
     display: block;
+    margin: 0;
 }
 
 @media all and (min-device-width: 600px) {
