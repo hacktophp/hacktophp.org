@@ -15,7 +15,7 @@ $handle = fopen($tmpfname, "w");
 fwrite($handle, $file_contents);
 fclose($handle);
 
-$ast = json_decode(shell_exec('hh_parse ----php5-compat-mode --full-fidelity-json ' . $tmpfname));
+$ast = json_decode(shell_exec('hh_parse --php5-compat-mode --full-fidelity-json ' . $tmpfname));
 
 if (!$ast) {
     unlink($tmpfname);
