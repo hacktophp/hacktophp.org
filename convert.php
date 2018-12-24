@@ -44,6 +44,4 @@ try {
     echo json_encode(['code' => '<?php' . PHP_EOL . $prettyPrinter->prettyPrint($stmts) . PHP_EOL]);
 } catch (Throwable $t) {
     echo json_encode(['error' => $t->getMessage()]);
-} finally {
-    unlink($tmpfname);
 }
