@@ -1,14 +1,4 @@
 <script>
-var expandCode = function() {
-    document.querySelector('body').classList.add('code_expanded');
-    return false;
-};
-
-var shrinkCode = function() {
-    document.querySelector('body').classList.remove('code_expanded');
-    return false;
-};
-
 var serializeJSON = function(data) {
     return Object.keys(data).map(function (keyName) {
         return encodeURIComponent(keyName) + '=' + encodeURIComponent(data[keyName])
@@ -46,7 +36,7 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
                 if ('code' in response) {
                     var hacktophp_header = 'PHP output: \n\n'
 
-                    document.getElementById('hacktophp_output').innerText = hacktophp_header + response.code;
+                    document.getElementById('hacktophp_output').innerText = response.code;
 
                     callback([]); 
                 }

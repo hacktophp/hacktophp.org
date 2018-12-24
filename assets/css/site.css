@@ -622,14 +622,14 @@ div.CodeMirror {
 
     .code_expanded .CodeMirror,
     .code_expanded #hacktophp_output {
-        height: calc(65vh - 80px);
+        height: calc(50vh - 40px);
         width:100%;
         display: block;
         box-sizing: border-box;
     }
 
     .code_expanded #hacktophp_output {
-        height: calc(35vh - 80px);
+        height: calc(50vh - 40px);
         border-top: 0;
         overflow: auto;
     }

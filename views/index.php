@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="/assets/css/site.css">
 <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 </head>
-<body>
+<body class="code_expanded">
 <div class="container" id="page_container">
     <?php require('../includes/nav.php'); ?>
     <div class="cm_container">
@@ -25,10 +25,6 @@ function piped_example(array<int> $arr, int $y): int {
 }
 </textarea>
         <pre id="hacktophp_output"></pre>
-        <div class="button_bar">
-            <button onclick="javascript:expandCode();" id="expander"><svg width="15" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M0 5h1.5v6.4L12.9 0l1.4 1.2L2.8 12.5H9V14H0z" fill-rule="evenodd"/></svg> Expand</button>
-            <button onclick="javascript:shrinkCode();" id="shrinker"><svg width="15" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M15 9h-1.5V2.6L2.1 14 .8 12.8 12.2 1.5H6V0h9z" fill-rule="evenodd"/></svg> Shrink</button>
-        </div>
     </div>
     
 
