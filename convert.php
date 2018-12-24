@@ -42,7 +42,7 @@ try {
     $prettyPrinter = new \PhpParser\PrettyPrinter\Standard;
     echo json_encode(['code' => '<?php' . PHP_EOL . $prettyPrinter->prettyPrint($stmts) . PHP_EOL]);
 } catch (Throwable $t) {
-    echo json_encode(['error' => 'Error']);
+    echo json_encode(['error' => $t->getMessage()]);
 } finally {
     unlink($tmpfname);
 }
