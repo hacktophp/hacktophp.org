@@ -24,7 +24,7 @@ function piped_example(array<int> $arr, int $y): int {
     |> \count($$);
 }
 </textarea>
-        <div id="hacktophp_output"></div>
+        <pre id="hacktophp_output"></pre>
         <div class="button_bar">
             <button onclick="javascript:expandCode();" id="expander"><svg width="15" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M0 5h1.5v6.4L12.9 0l1.4 1.2L2.8 12.5H9V14H0z" fill-rule="evenodd"/></svg> Expand</button>
             <button onclick="javascript:shrinkCode();" id="shrinker"><svg width="15" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M15 9h-1.5V2.6L2.1 14 .8 12.8 12.2 1.5H6V0h9z" fill-rule="evenodd"/></svg> Shrink</button>
