@@ -9,28 +9,6 @@ var shrinkCode = function() {
     return false;
 };
 
-var getLink = function() {
-    fetch('/add_code.php', {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json, application/xml, text/plain, text/html, *.*',
-            'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
-        },
-        body: serializeJSON({code: editor.getValue()})
-    })
-    .then(function (response) {
-        return response.text();
-    })
-    .then(function (response) {
-        if (response.indexOf('/r/') === -1) {
-            alert(response);
-        } else {
-            window.location = '//' + response;
-        }
-    });
-    return false;
-};
-
 var serializeJSON = function(data) {
     return Object.keys(data).map(function (keyName) {
         return encodeURIComponent(keyName) + '=' + encodeURIComponent(data[keyName])
@@ -66,12 +44,6 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
                 }
 
                 if ('code' in response) {
-                    var hacktophp_version = response.version;
-                    
-                    if (hacktophp_version.indexOf('@')) {
-                        hacktophp_version = hacktophp_version.split('@')[1];
-                    }
-
                     var hacktophp_header = 'PHP output: \n\n'
 
                     document.getElementById('hacktophp_output').innerText = hacktophp_header + response.code;
