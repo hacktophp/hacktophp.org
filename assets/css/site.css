@@ -571,7 +571,7 @@ div.cm_container #shrinker {
 div.CodeMirror,
 div.CodeMirror-lint-tooltip,
 .intro pre,
-#psalm_output,
+#hacktophp_output,
 code {
     font-family: "Operator Mono SSm A", "Operator Mono SSm B";
     font-style: normal;
@@ -579,10 +579,10 @@ code {
     line-height: 1.5em;
 }
 div.CodeMirror,
-#psalm_output {
+#hacktophp_output {
     border: 2px solid black;
 }
-#psalm_output {
+#hacktophp_output {
     display: none;
     font-family: "Operator Mono SSm A", "Operator Mono SSm B";
     font-size: 14px;
@@ -599,7 +599,7 @@ div.CodeMirror {
     position: relative;
 }
 
-.code_expanded #psalm_output {
+.code_expanded #hacktophp_output {
     display: block;
 }
 
@@ -620,14 +620,14 @@ div.CodeMirror {
     }
 
     .code_expanded .CodeMirror,
-    .code_expanded #psalm_output {
+    .code_expanded #hacktophp_output {
         height: calc(65vh - 80px);
         width:100%;
         display: block;
         box-sizing: border-box;
     }
 
-    .code_expanded #psalm_output {
+    .code_expanded #hacktophp_output {
         height: calc(35vh - 80px);
         border-top: 0;
         overflow: auto;
