@@ -2,7 +2,7 @@
     "name": "psalm/hacktophp.org",
     "type": "project",
     "require": {
-        "psalm/hack-to-php": "dev-master"
+        "hacktophp/hacktophp": "dev-master"
     },
     "minimum-stability": "dev",
     "autoload": {
