@@ -63,7 +63,6 @@ var exampleSelector = document.getElementById('hack_example_selector');
 exampleSelector.addEventListener(
     'change',
     function () {
-        console.log(exampleSelector.value);
         editor.getDoc().setValue(example_code[exampleSelector.value]);
     }
 );

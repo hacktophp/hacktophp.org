@@ -33,7 +33,7 @@ a {
 }
 
 h2 {
-    padding: 20px;
+    padding: 20px 20px 0;
 }
 
 .intro, .faq {
@@ -117,12 +117,17 @@ div.CodeMirror {
     }
 }
 
-@media all and (max-width: 1021px) {
-    .intro {
+@media all and (max-width: 960px) {
+    .intro, .faq {
         float: none;
-        padding: 0 25px 50px;
-        max-width: 492px;
+        padding: 0 20px 50px;
+        max-width: 500px;
         width: auto;
+    }
+
+    #hack_container, #php_container {
+        width: 100%;
+        float: none;
     }
 }
 
