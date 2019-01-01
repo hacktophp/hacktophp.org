@@ -60,11 +60,21 @@ h2 {
 }
 
 #hack_container {
+    color: #875a0d;
     background: #f8ebd4;
 }
 
 #php_container {
+    color: #4053ac;
     background: #d9def6;
+}
+
+select {
+    border: 1px solid #795820;
+    font-family: "Operator A", "Operator B";
+    font-size: 16px;
+    background: #FFF;
+    margin-left: 1em;
 }
 
 div.CodeMirror,
