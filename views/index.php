@@ -72,6 +72,7 @@ function partition<Tv>(
     <div class="intro">
         <p>This project uses HHVM's builtin parser (<code>hh_parse</code>) and <a href="https://github.com/hhvm/hhast">an existing library</a> to turn Hack code into PHP code. It generates <a href="https://github.com/nikic/php-parser">PHP-Parser</a>-equivalent nodes for the original Hack AST, then prints the result.</p>
         <p>It aims to preserve all of Hack’s types so that the resultant PHP code can be checked by a tool like <a href="https://github.com/vimeo/psalm">Psalm</a>, converting any asynchronous code to its synchronous equivalent.</p>
+        <p><a href="https://github.com/hacktophp/hacktophp">Head on over to GitHub</a> to see all the gritty details.</p>
     </div>
     <div class="faq">
         <p><strong>Who made this?</strong> <a href="https://github.com/muglug">I did</a>.</p>
