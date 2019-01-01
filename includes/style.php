@@ -22,49 +22,42 @@ h1 {
     font-size: 64px;
 }
 
-.code_expanded nav h2, 
-.code_expanded nav ul {
-    display: none;
+a {
+    color: #000;
 }
 
-.code_expanded nav hgroup {
-    margin: 15px 0 10px;
+h2 {
+    padding: 20px;
 }
 
-.code_expanded nav h1 a svg {
-    height: 25px;
-    width: auto;
-}
-
-.intro {
-    max-width: 492px;
+.intro, .faq {
+    width: 50%;
     padding: 0 20px 50px;
     float: left;
 }
 
-.code_expanded .intro {
-    display: none;
-}
-
-.intro p,
-.documentation p,
-.intro ul,
-.documentation ul {
+.intro p {
     hyphens: auto;
     margin: 1em 0;
 }
 
-.intro ul,
-.documentation ul {
-    margin-left: 0;
-    -webkit-padding-start: 20px;
-    padding-inline-start: 20px;
+#transpiler {
+    overflow: hidden;
 }
 
-.intro h3 {
-    font-weight: normal;
-    font-size: 24px;
-    margin: 1.5em 0 0.8em;
+#hack_container, #php_container {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+#hack_container {
+    background: #f8ebd4;
+}
+
+#php_container {
+    background: #d9def6;
 }
 
 div.CodeMirror,
@@ -76,10 +69,13 @@ code {
     font-weight: 400;
     line-height: 1.5em;
 }
+
 div.CodeMirror,
 #php_code {
-    border: 2px solid black;
+    box-shadow: 0 0 0px 3px rgba(0, 0, 0, 0.1);
+    margin: 1em 0 0 0;
 }
+
 #php_code {
     font-family: "Operator Mono SSm A", "Operator Mono SSm B";
     font-size: 14px;
@@ -92,7 +88,7 @@ div.CodeMirror {
     font-size: 14px;
     height: 360px;
     overflow: hidden;
-    transition: 0.2s linear border-color, 0.2s linear box-shadow;
+    transition: 0.2s linear box-shadow;
     position: relative;
 }
 
@@ -103,7 +99,7 @@ div.CodeMirror {
 
 @media all and (min-device-width: 600px) {
     div.CodeMirror.CodeMirror-focused {
-        box-shadow: 0 0 0px 1px #000;
+        box-shadow: 0 0 0px 3px rgba(0, 0, 0, 0.3)
     }
 
     div.CodeMirror:not(.CodeMirror-focused):hover {
