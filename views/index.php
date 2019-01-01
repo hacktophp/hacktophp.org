@@ -74,14 +74,13 @@ function partition<Tv>(
         <p>It aims to preserve all of Hack’s types so that the resultant PHP code can be checked by a tool like <a href="https://github.com/vimeo/psalm">Psalm</a>, converting any asynchronous code to its synchronous equivalent.</p>
     </div>
     <div class="faq">
-        <p><strong>Who made this?</strong><br />
-        <a href="https://github.com/muglug">I did</a>.</p>
+        <p><strong>Who made this?</strong> <a href="https://github.com/muglug">I did</a>.</p>
 
-        <p><strong>Why?</strong><br />
+        <p><strong>Why?</strong> 
         Because it didn’t exist (though it has <a href="https://github.com/phplang/phack">an antecedent</a>).</p>
 
-        <p><strong>Is it production-ready?</strong><br />
-        Hack no.</p>
+        <p><strong>Is it production-ready?</strong> 
+        <em>Hack</em> no.</p>
 
         <p><strong>Who uses it?</strong>
         Nobody.</p>
