@@ -7,7 +7,8 @@ function piped_example(array<int> $arr, int $y): int {
     |> \array_map($x ==> $x * $x, $$)
     |> \array_filter($$, $x ==> $x % $y == 0)
     |> \count($$);
-}',
+}
+',
 'type_support' => '<?hh
 
 function partition<Tv>(
@@ -24,7 +25,8 @@ function partition<Tv>(
     }
   }
   return tuple($success, $failure);
-}',
+}
+',
 ];
 ?>
 <html>
@@ -50,7 +52,7 @@ function partition<Tv>(
             name="hack_code"
             id="hack_code"
             rows="20" style="visibility: hidden; font-family: monospace; font-size: 14px; max-width: 900px; min-width: 320px;"
-        ><?= $code['pipes_and_lambdas'] ?></textarea>
+        ><?php echo $example_code['pipes_and_lambdas'] ?></textarea>
     </div>
     <div id="php_container">
         <label for="php_code">PHP output</label>
@@ -81,7 +83,9 @@ function partition<Tv>(
         Nobody.</p>
     </div>
 </div>
-
+<script>
+    var example_code = <?php echo json_encode($example_code);?>
+</script>
 <?php require('../includes/footer.php'); ?>
 <?php require('../includes/script.php'); ?>
 </body>
