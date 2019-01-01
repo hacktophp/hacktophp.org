@@ -58,6 +58,16 @@ function refreshResults() {
     });
 }
 
+var exampleSelector = document.getElementById('hackExampleSelector');
+
+exampleSelector.on(
+    'change',
+    function () {
+        console.log(exampleSelector.value);
+        editor.getDoc().setValue(example_code[exampleSelector.value]);
+    }
+);
+
 editor.on(
     'change',
     function () {

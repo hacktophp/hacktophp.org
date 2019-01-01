@@ -44,7 +44,7 @@ function partition<Tv>(
 <div id="transpiler">
     <div id="hack_container">
         <label for="hack_code">Hack input</label>
-        <select name="hack_examples">
+        <select name="hack_examples" id="hack_example_selector">
             <option value="pipes_and_lambdas">Pipes &amp; Lambdas</option>
             <option value="type_support">Types</option>
         </select>
