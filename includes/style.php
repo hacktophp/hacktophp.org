@@ -10,16 +10,22 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .container {
-    max-width: 1024px;
+    max-width: 960px;
     margin: 0 auto;
     flex: 1;
 }
 
 h1 {
-    width: 300px;
+    text-align: center;
     margin: 10px 0;
     font-size: 64px;
+}
+
+h1 svg {
+    width: 200px;
+    height: 66px;
 }
 
 a {
@@ -34,6 +40,7 @@ h2 {
     width: 50%;
     padding: 0 20px 50px;
     float: left;
+    box-sizing: border-box;
 }
 
 .intro p {
@@ -70,6 +77,10 @@ code {
     line-height: 1.5em;
 }
 
+code {
+    font-size: 90%;
+}
+
 div.CodeMirror,
 #php_code {
     box-shadow: 0 0 0px 3px rgba(0, 0, 0, 0.1);
@@ -82,6 +93,7 @@ div.CodeMirror,
     line-height: 1.5em;
     padding: 5px;
     color: #666;
+    height: 350px;
 }
 div.CodeMirror {
     z-index: 2;
@@ -94,7 +106,7 @@ div.CodeMirror {
 
 #php_code {
     display: block;
-    margin: 0;
+    background: #FFF;
 }
 
 @media all and (min-device-width: 600px) {

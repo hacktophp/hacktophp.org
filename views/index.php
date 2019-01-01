@@ -69,7 +69,7 @@ function partition<Tv>(
     </div>
     <div class="faq">
         <p><strong>Who made this?</strong><br />
-        I did.</p>
+        <a href="https://github.com/muglug">I did</a>.</p>
 
         <p><strong>Why?</strong><br />
         Because it didn’t exist (though it has <a href="https://github.com/phplang/phack">an antecedent</a>).</p>
