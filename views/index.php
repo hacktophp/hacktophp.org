@@ -56,7 +56,11 @@ function partition<Tv>(
     </div>
     <div id="php_container">
         <label for="php_code">PHP output</label>
-        <pre id="php_code"></pre>
+        <textarea
+            name="php_code"
+            id="php_code"
+            rows="20" style="visibility: hidden; font-family: monospace; font-size: 14px; max-width: 900px; min-width: 320px;"
+        ></textarea>
     </div>
 </div>
 

@@ -19,7 +19,7 @@ body {
 
 h1 {
     text-align: center;
-    margin: 10px 0;
+    margin: 20px 0;
     font-size: 64px;
 }
 
@@ -79,7 +79,6 @@ select {
 
 div.CodeMirror,
 div.CodeMirror-lint-tooltip,
-#php_code,
 code {
     font-family: "Operator Mono SSm A", "Operator Mono SSm B";
     font-style: normal;
@@ -91,20 +90,11 @@ code {
     font-size: 90%;
 }
 
-div.CodeMirror,
-#php_code {
+div.CodeMirror {
     box-shadow: 0 0 0px 3px rgba(0, 0, 0, 0.1);
     margin: 1em 0 0 0;
 }
 
-#php_code {
-    font-family: "Operator Mono SSm A", "Operator Mono SSm B";
-    font-size: 14px;
-    line-height: 1.5em;
-    padding: 5px;
-    color: #666;
-    height: 350px;
-}
 div.CodeMirror {
     z-index: 2;
     font-size: 14px;
@@ -112,11 +102,6 @@ div.CodeMirror {
     overflow: hidden;
     transition: 0.2s linear box-shadow;
     position: relative;
-}
-
-#php_code {
-    display: block;
-    background: #FFF;
 }
 
 @media all and (min-device-width: 600px) {
