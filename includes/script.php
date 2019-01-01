@@ -58,7 +58,7 @@ function refreshResults() {
     });
 }
 
-var exampleSelector = document.getElementById('hackExampleSelector');
+var exampleSelector = document.getElementById('hack_example_selector');
 
 exampleSelector.on(
     'change',
