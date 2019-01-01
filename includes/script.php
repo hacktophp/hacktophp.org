@@ -7,7 +7,7 @@ var serializeJSON = function(data) {
 
 var latestFetch = 0;
 
-var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+var editor = CodeMirror.fromTextArea(document.getElementById("hack_code"), {
     lineNumbers: true,
     matchBrackets: true,
     mode: "text/x-php",
