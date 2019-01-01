@@ -36,14 +36,14 @@ var editor = CodeMirror.fromTextArea(document.getElementById("hack_code"), {
                 if ('code' in response) {
                     var hacktophp_header = 'PHP output: \n\n'
 
-                    document.getElementById('hacktophp_output').innerText = response.code;
+                    document.getElementById('php_code').innerText = response.code;
 
                     callback([]); 
                 }
                 else if ('error' in response) {
                     var hacktophp_header = 'Error output: \n\n'
 
-                    document.getElementById('hacktophp_output').innerText = hacktophp_header + response.error;
+                    document.getElementById('php_code').innerText = hacktophp_header + response.error;
 
                     callback([]);
                 }
