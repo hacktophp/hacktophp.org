@@ -19,7 +19,7 @@ body {
 
 h1 {
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0 30px 10px;
     font-size: 64px;
 }
 
@@ -91,11 +91,7 @@ code {
 }
 
 div.CodeMirror {
-    box-shadow: 0 0 0px 3px rgba(0, 0, 0, 0.1);
     margin: 1em 0 0 0;
-}
-
-div.CodeMirror {
     z-index: 2;
     font-size: 14px;
     height: 360px;
@@ -104,9 +100,21 @@ div.CodeMirror {
     position: relative;
 }
 
+#hack_container div.CodeMirror {
+    box-shadow: 0 0 0px 3px rgba(233, 193, 121, 0.5);
+}
+
+#php_container div.CodeMirror {
+    box-shadow: 0 0 0px 3px rgba(137, 152, 227, 0.5);
+}
+
 @media all and (min-device-width: 600px) {
-    div.CodeMirror.CodeMirror-focused {
-        box-shadow: 0 0 0px 3px rgba(0, 0, 0, 0.3)
+    #hack_container div.CodeMirror.CodeMirror-focused {
+        box-shadow: 0 0 0px 3px rgba(233, 193, 121, 1);
+    }
+
+    #php_container div.CodeMirror.CodeMirror-focused {
+        box-shadow: 0 0 0px 3px rgba(137, 152, 227, 1);
     }
 
     div.CodeMirror:not(.CodeMirror-focused):hover {
