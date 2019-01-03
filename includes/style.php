@@ -22,7 +22,7 @@ h1 {
     font-weight: normal;
     text-align: left;
     line-height: 1.2em;
-    margin: 35px 20px 15px;
+    margin: 35px 20px 10px;
 }
 
 a {
