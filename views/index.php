@@ -66,6 +66,14 @@ function shuffle_off_mortal_coil() : noreturn
     die();
   }
 }',
+'as_expression' => '<?hh
+
+function foo(mixed $s) {
+  if ($s is int) {
+    // do something
+  }
+  $a = $s as int;
+}',
 ];
 ?>
 <html>
@@ -92,6 +100,7 @@ function shuffle_off_mortal_coil() : noreturn
             <option value="aliased_types">Aliased types</option>
             <option value="constructor_properties">Constructor properties</option>
             <option value="enums">Enums</option>
+            <option value="as_expression">is &amp; as expressions</option>
             <option value="noreturn">noreturn</option>
         </select>
         <textarea
