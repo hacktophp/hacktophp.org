@@ -79,7 +79,10 @@ function shuffle_off_mortal_coil() : noreturn
 </head>
 <body>
 
-<?php require('../includes/nav.php'); ?>
+<div class="container">
+<h1><strong>HackToPhp:</strong> A proof-of-concept Hack-to-PHP transpiler, written in PHP</h1>
+</div>
+
 <div id="transpiler">
     <div id="hack_container">
         <label for="hack_code">Hack input</label>
@@ -108,12 +111,8 @@ function shuffle_off_mortal_coil() : noreturn
 </div>
 
 <div class="container">
-    <h2>
-        A proof-of-concept <a href="https://hacklang.org">Hack</a> to <a href="https://php.net">PHP</a> transpiler, written in PHP
-    </h2>
-
     <div class="intro">
-        <p>This project uses HHVM's builtin parser (<code>hh_parse</code>) and <a href="https://github.com/hhvm/hhast">an existing library</a> to turn Hack code into PHP code. It generates <a href="https://github.com/nikic/php-parser">PHP-Parser</a>-equivalent nodes for the original Hack AST, then prints the result.</p>
+        <p>This project uses HHVM's builtin parser (<code>hh_parse</code>) and <a href="https://github.com/hhvm/hhast">an existing library</a> to turn <a href="https://hacklang.org">Hack</a> code into <a href="https://php.net">PHP</a> code. It generates <a href="https://github.com/nikic/php-parser">PHP-Parser</a>-equivalent nodes for the original Hack AST, then prints the result.</p>
         <p>It aims to preserve all of Hack’s types so that the resultant PHP code can be checked by a tool like <a href="https://github.com/vimeo/psalm">Psalm</a>, converting any asynchronous code to its synchronous equivalent.</p>
         <p><a href="https://github.com/hacktophp/hacktophp">Head on over to GitHub</a> to see all the gritty details.</p>
     </div>

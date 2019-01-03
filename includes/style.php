@@ -18,12 +18,10 @@ body {
 }
 
 h1 {
-    text-align: center;
-    margin: 30px 0 30px 10px;
-    font-size: 64px;
+    font-size: 24px;
 }
 
-h1 svg {
+footer svg {
     width: 200px;
     height: 66px;
 }
