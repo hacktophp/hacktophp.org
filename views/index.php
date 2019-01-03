@@ -27,6 +27,45 @@ function partition<Tv>(
   return tuple($success, $failure);
 }
 ',
+'aliased_types' => '<?hh
+
+type Point2D = shape(\'x\' => int, \'y\' => int);
+
+function distance(Point2D $a, Point2D $b) : float
+{
+    return sqrt(pow($b[\'x\'] - $a[\'x\'], 2) + pow($b[\'y\'] - $a[\'y\'], 2));
+}
+',
+'constructor_properties' => '<?hh
+
+class Foo<T> {
+  public function __construct(private T $t) {}
+  public function get() : T {
+    return $this->t;
+  }
+}',
+'enums' => '<?hh
+enum RoadType : int
+{
+    ROAD = 0;
+    STREET = 1;
+    AVENUE = 2;
+}
+
+function getRoadType() : RoadType
+{
+    return RoadType::AVENUE;
+}',
+'noreturn' => '<?hh
+
+function shuffle_off_mortal_coil() : noreturn
+{
+  if (rand(0, 1)) {
+    exit();
+  } else {
+    die();
+  }
+}',
 ];
 ?>
 <html>
@@ -46,7 +85,11 @@ function partition<Tv>(
         <label for="hack_code">Hack input</label>
         <select name="hack_examples" id="hack_example_selector">
             <option value="pipes_and_lambdas">Pipes &amp; Lambdas</option>
-            <option value="type_support">Types</option>
+            <option value="type_support">Parameterised types</option>
+            <option value="aliased_types">Aliased types</option>
+            <option value="constructor_properties">Constructor properties</option>
+            <option value="enums">Enums</option>
+            <option value="noreturn">noreturn</option>
         </select>
         <textarea
             name="hack_code"
