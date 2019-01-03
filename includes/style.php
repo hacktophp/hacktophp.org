@@ -19,11 +19,9 @@ body {
 
 h1 {
     font-size: 24px;
-}
-
-footer svg {
-    width: 200px;
-    height: 66px;
+    font-weight: normal;
+    text-align: left;
+    margin: 40px 20px 20px;
 }
 
 a {
@@ -48,6 +46,7 @@ h2 {
 
 #transpiler {
     overflow: hidden;
+    margin: 20px 40px;
 }
 
 #hack_container, #php_container {
@@ -98,12 +97,20 @@ div.CodeMirror {
     position: relative;
 }
 
+#hack_container {
+    box-shadow: 0 3px 0px 0 rgba(233, 193, 121, 0.35) inset;
+}
+
+#php_container {
+    box-shadow: 0 3px 0px 0 rgba(137, 152, 227, 0.2) inset;
+}
+
 #hack_container div.CodeMirror {
     box-shadow: 0 0 0px 3px rgba(233, 193, 121, 0.5);
 }
 
 #php_container div.CodeMirror {
-    box-shadow: 0 0 0px 3px rgba(137, 152, 227, 0.5);
+    box-shadow: 0 0 0px 3px rgba(137, 152, 227, 0.4);
 }
 
 @media all and (min-device-width: 600px) {
@@ -112,7 +119,7 @@ div.CodeMirror {
     }
 
     #php_container div.CodeMirror.CodeMirror-focused {
-        box-shadow: 0 0 0px 3px rgba(137, 152, 227, 1);
+        box-shadow: 0 0 0px 3px rgba(137, 152, 227, 0.8);
     }
 
     div.CodeMirror:not(.CodeMirror-focused):hover {
@@ -124,9 +131,13 @@ div.CodeMirror {
 }
 
 @media all and (max-width: 960px) {
+    #transpiler {
+        margin: 0;
+    }
+
     .intro, .faq {
         float: none;
-        padding: 0 20px 50px;
+        padding: 0 20px 30px;
         max-width: 500px;
         width: auto;
     }
@@ -135,6 +146,16 @@ div.CodeMirror {
         width: 100%;
         float: none;
     }
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0 30px;
+}
+
+footer svg {
+    width: 200px;
+    height: 66px;
 }
 
 </style>
