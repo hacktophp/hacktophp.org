@@ -109,7 +109,7 @@ function shuffle_off_mortal_coil() : noreturn
 
 <div class="container">
     <h2>
-        A <a href="https://hacklang.org">Hack</a> to <a href="https://php.net">PHP</a> transpiler, written in PHP
+        A proof-of-concept <a href="https://hacklang.org">Hack</a> to <a href="https://php.net">PHP</a> transpiler, written in PHP
     </h2>
 
     <div class="intro">
