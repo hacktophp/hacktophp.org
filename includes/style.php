@@ -22,7 +22,7 @@ h1 {
     font-weight: normal;
     text-align: left;
     line-height: 1.2em;
-    margin: 40px 20px 20px;
+    margin: 35px 20px 15px;
 }
 
 a {
@@ -35,7 +35,7 @@ h2 {
 
 .intro, .faq {
     width: 50%;
-    padding: 0 20px 50px;
+    padding: 0 20px 20px;
     float: left;
     box-sizing: border-box;
 }
@@ -92,7 +92,7 @@ div.CodeMirror {
     margin: 1em 0 0 0;
     z-index: 2;
     font-size: 14px;
-    height: 360px;
+    height: 340px;
     overflow: hidden;
     transition: 0.2s linear box-shadow;
     position: relative;
