@@ -7,14 +7,11 @@ body {
     padding: 0;
     font-size: 16px;
     min-height: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
 .container {
     max-width: 960px;
     margin: 0 auto;
-    flex: 1;
 }
 
 h1 {
