@@ -12,6 +12,7 @@ body {
 .container {
     max-width: 960px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 h1 {
