@@ -19,6 +19,7 @@ try {
     $ast = Facebook\HHAST\from_file($tmpfname);
 } catch (Throwable $t) {
     echo json_encode(['error' => $t->getMessage()]);
+    exit();
 } finally {
     unlink($tmpfname);
 }
